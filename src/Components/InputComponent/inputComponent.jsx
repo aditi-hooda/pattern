@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PatternA, PatternB, PatternC, PatternD, PatternE, PatternF, PatternG, PatternH, PatternI, PatternJ, PatternK, PatternL, PatternM, PatternN, PatternO, PatternP, PatternQ, PatternR, PatternS, PatternT } from '../DisplayComponents';
+import { PatternA, PatternB, PatternC, PatternD, PatternE, PatternF, PatternG, PatternH, PatternI, PatternJ, PatternK, PatternL, PatternM, PatternN, PatternO, PatternP, PatternQ, PatternR, PatternS, PatternT, PatternV, PatternW } from '../DisplayComponents';
 
 export default function InputComponent() {
     const [inputValue, setInputValue] = useState('');
@@ -78,8 +78,10 @@ export default function InputComponent() {
                 case 'U':
                     break;
                 case 'V':
+                    retComponents.push(<PatternV />);
                     break;
                 case 'W':
+                    retComponents.push(<PatternW />);
                     break;
                 case 'X':
                     break;

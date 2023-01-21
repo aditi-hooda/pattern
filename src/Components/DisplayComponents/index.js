@@ -18,6 +18,8 @@ import PatternQ from "./PatternQ/PatternQ";
 import PatternR from "./PatternR/PatternR";
 import PatternS from "./PatternS/PatternS";
 import PatternT from "./PatternT/PatternT";
+import PatternV from "./PatternV/PatternV";
+import PatternW from "./PatternW/PatternW";
 
 export {
     PatternA,
@@ -40,4 +42,6 @@ export {
     PatternR,
     PatternS,
     PatternT,
+    PatternV,
+    PatternW,
 }
