@@ -15,7 +15,7 @@ public class PrintA {
     }
 }    
     `,
-    explaination: `This code will print an 'A' made of asterisks (*) using nested loops. 
+    explanation: `This code will print an 'A' made of asterisks (*) using nested loops. 
     The outer loop (i) controls the rows, and the inner loop (j) controls the columns. 
     The if statement inside the loops checks the current row (i) and column (j) 
     and prints an asterisk if it is the first row or middle row or the first column or last column, otherwise it will print a space.`

@@ -15,15 +15,20 @@ export default function ExplanationComponent(props) {
         <div className='explanation-container'>
             <div className="header">
                 <button className="btn-copy" onClick={copyToClipboard}>
-                    <img src={images.copyimg}/>
+                    <img src={images.copyimg} />
                     Copy code
                 </button>
             </div>
-            <pre className='code' title='Click me to see the explaination of this code'>
+            <pre className='code' title='Click me to see the explanation of this code'>
                 <code>{props.data.code}</code>
             </pre>
             <div className='explanation'>
-                {props.data.explaination}
+                <img src={props.image} />
+                <pre>
+                    <code>
+                        {props.data.explanation}
+                    </code>
+                </pre>
             </div>
         </div>
 
