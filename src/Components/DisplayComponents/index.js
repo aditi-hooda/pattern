@@ -20,6 +20,10 @@ import PatternS from "./PatternS/PatternS";
 import PatternT from "./PatternT/PatternT";
 import PatternV from "./PatternV/PatternV";
 import PatternW from "./PatternW/PatternW";
+import PatternU from "./PatternU/PatternU";
+import PatternX from "./PatternX/PatternX";
+import PatternY from "./PatternY/PatternY";
+import PatternZ from "./PatternZ/PatternZ";
 
 export {
     PatternA,
@@ -44,4 +48,8 @@ export {
     PatternT,
     PatternV,
     PatternW,
+    PatternU,
+    PatternX,
+    PatternY,
+    PatternZ,
 }

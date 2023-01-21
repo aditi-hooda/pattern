@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PatternA, PatternB, PatternC, PatternD, PatternE, PatternF, PatternG, PatternH, PatternI, PatternJ, PatternK, PatternL, PatternM, PatternN, PatternO, PatternP, PatternQ, PatternR, PatternS, PatternT, PatternV, PatternW } from '../DisplayComponents';
+import { PatternA, PatternB, PatternC, PatternD, PatternE, PatternF, PatternG, PatternH, PatternI, PatternJ, PatternK, PatternL, PatternM, PatternN, PatternO, PatternP, PatternQ, PatternR, PatternS, PatternT, PatternV, PatternW, PatternU, PatternX, PatternY, PatternZ } from '../DisplayComponents';
 
 export default function InputComponent() {
     const [inputValue, setInputValue] = useState('');
@@ -76,6 +76,7 @@ export default function InputComponent() {
                     retComponents.push(<PatternT />);
                     break;
                 case 'U':
+                    retComponents.push(<PatternU />);
                     break;
                 case 'V':
                     retComponents.push(<PatternV />);
@@ -84,10 +85,13 @@ export default function InputComponent() {
                     retComponents.push(<PatternW />);
                     break;
                 case 'X':
+                    retComponents.push(<PatternX />);
                     break;
                 case 'Y':
+                    retComponents.push(<PatternY />);
                     break;
                 case 'Z':
+                    retComponents.push(<PatternZ />);
                     break;
                 default:
                     alert("Invalid Character");
