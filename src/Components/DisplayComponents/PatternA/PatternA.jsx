@@ -12,13 +12,13 @@ export default function PatternA() {
     }
     useEffect(() => {
         var retPattern = '';
-        for (var i = 0; i < 7; i++) {
+        for (var i = 0; i <= 6; i++) {
             retPattern += "<div>";
             for (var j = 0; j < 5; j++) {
                 if (i === 0 || i === 3) {
                     retPattern += "<span class='star'>*</span>";
                 }
-                else if (j == 0 || j == 4) {
+                else if (j === 0 || j === 4) {
                     retPattern += "<span class='star'>*</span>";
                 }
                 else {
@@ -28,13 +28,13 @@ export default function PatternA() {
             retPattern += "</div>";
         }
         setPattern(retPattern);
-    })
+    },[pattern])
 
     return (
         <div>
             <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
             </div>
-            {showCode && <ExplanationComponent code={data.code}/>}
+            {showCode && <ExplanationComponent code={data.code} />}
         </div>
     )
 }

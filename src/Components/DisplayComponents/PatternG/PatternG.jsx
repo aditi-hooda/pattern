@@ -4,8 +4,7 @@ import { useEffect } from 'react';
 import ExplanationComponent from '../../ExplanationComponent/ExplanationComponent';
 import { data } from './data';
 
-export default function PatternB() {
-
+export default function PatternG() {
     let [pattern, setPattern] = useState('');
     let [showCode, setshowCode] = useState(false);
     function handleClick() {
@@ -16,10 +15,10 @@ export default function PatternB() {
         for (var i = 0; i <= 6; i++) {
             retPattern += "<div>";
             for (var j = 0; j < 5; j++) {
-                if (i === 0 || i === 3 || i === 6) {
+                if (i === 0 || i === 6 || (i===3 && j>1)) {
                     retPattern += "<span class='star'>*</span>";
                 }
-                else if (j === 0 || j === 4) {
+                else if (j === 0 || (j === 4 && i>3)) {
                     retPattern += "<span class='star'>*</span>";
                 }
                 else {
@@ -29,7 +28,7 @@ export default function PatternB() {
             retPattern += "</div>";
         }
         setPattern(retPattern);
-    }, [pattern])
+    },[pattern])
 
     return (
         <div>
@@ -38,5 +37,4 @@ export default function PatternB() {
             {showCode && <ExplanationComponent code={data.code} />}
         </div>
     )
-
 }

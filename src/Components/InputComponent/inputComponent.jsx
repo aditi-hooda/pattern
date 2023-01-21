@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import PatternA from '../DisplayComponents/PatternA/PatternA';
-import PatternB from '../DisplayComponents/PatternB/PatternB';
+import { PatternA, PatternB, PatternC, PatternD, PatternE, PatternF, PatternG, PatternH, PatternI, PatternJ, PatternK, PatternL, PatternM } from '../DisplayComponents';
 
 export default function InputComponent() {
     const [inputValue, setInputValue] = useState('');
     var [ComponentsList, setComponentsList] = useState([]);
 
-    const x = "*" + <br /> + "**\n\r***\n\r****";
     function handleChange(event) {
         setInputValue(event.target.value);
     }
@@ -23,24 +21,37 @@ export default function InputComponent() {
                     retComponents.push(<PatternB />);
                     break;
                 case 'C':
+                    retComponents.push(<PatternC />);
                     break;
                 case 'D':
+                    retComponents.push(<PatternD />);
                     break;
                 case 'E':
+                    retComponents.push(<PatternE />);
                     break;
                 case 'F':
+                    retComponents.push(<PatternF />);
                     break;
                 case 'G':
+                    retComponents.push(<PatternG />);
                     break;
                 case 'H':
+                    retComponents.push(<PatternH />);
                     break;
                 case 'I':
+                    retComponents.push(<PatternI />);
                     break;
                 case 'J':
+                    retComponents.push(<PatternJ />);
                     break;
                 case 'K':
+                    retComponents.push(<PatternK />);
                     break;
                 case 'L':
+                    retComponents.push(<PatternL />);
+                    break;
+                case 'M':
+                    retComponents.push(<PatternM />);
                     break;
                 case 'N':
                     break;
