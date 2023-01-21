@@ -16,10 +16,10 @@ export default function PatternA() {
             retPattern += "<div>";
             for (var j = 0; j < 5; j++) {
                 if (i === 0 || i === 3) {
-                    retPattern += "<span>*</span>";
+                    retPattern += "<span class='star'>*</span>";
                 }
                 else if (j == 0 || j == 4) {
-                    retPattern += "<span>*</span>";
+                    retPattern += "<span class='star'>*</span>";
                 }
                 else {
                     retPattern += "<span class='space'> </span>";

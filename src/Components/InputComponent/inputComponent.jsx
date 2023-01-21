@@ -89,7 +89,7 @@ export default function InputComponent() {
             <div className='container-center'>
                 {ComponentsList && ComponentsList.map((val, index) => {
                     return (
-                        <div key={index}>
+                        <div key={index} className='alphabet'>
                             {val}
                         </div>);
                 })}
