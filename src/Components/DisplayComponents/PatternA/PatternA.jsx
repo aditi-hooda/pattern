@@ -15,12 +15,12 @@ export default function PatternA() {
         for (var i = 0; i <= 6; i++) {
             retPattern += "<div>";
             for (var j = 0; j < 5; j++) {
-                if (i === 0 || i === 3) {
+                if (i === 0 || i === 3 || j === 0 || j === 4) {
                     retPattern += "<span class='star'>*</span>";
                 }
-                else if (j === 0 || j === 4) {
-                    retPattern += "<span class='star'>*</span>";
-                }
+                // else if (j === 0 || j === 4) {
+                //     retPattern += "<span class='star'>*</span>";
+                // }
                 else {
                     retPattern += "<span class='space'> </span>";
                 }
@@ -34,7 +34,7 @@ export default function PatternA() {
         <div>
             <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
             </div>
-            {showCode && <ExplanationComponent code={data.code} />}
+            {showCode && <ExplanationComponent data={data} />}
         </div>
     )
 }

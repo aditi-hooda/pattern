@@ -34,7 +34,7 @@ export default function PatternD() {
         <div>
             <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
             </div>
-            {showCode && <ExplanationComponent code={data.code} />}
+            {showCode && <ExplanationComponent data={data} />}
         </div>
     )
 }

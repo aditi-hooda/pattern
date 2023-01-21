@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import ExplanationComponent from '../../ExplanationComponent/ExplanationComponent';
 import { data } from './data';
 
-export default function PatternC() {
+export default function PatternW() {
     let [pattern, setPattern] = useState('');
     let [showCode, setshowCode] = useState(false);
     function handleClick() {
@@ -14,11 +14,8 @@ export default function PatternC() {
         var retPattern = '';
         for (var i = 0; i <= 6; i++) {
             retPattern += "<div>";
-            for (var j = 0; j < 5; j++) {
-                if (i === 0 || i === 6) {
-                    retPattern += "<span class='star'>*</span>";
-                }
-                else if (j === 0) {
+            for (var j = 0; j <= 18; j++) {
+                if (j === i || (i + j === 12 && i > 2) || (j - i === 6 && i > 2) || (i + j === 18)) {
                     retPattern += "<span class='star'>*</span>";
                 }
                 else {
@@ -28,13 +25,13 @@ export default function PatternC() {
             retPattern += "</div>";
         }
         setPattern(retPattern);
-    },[pattern])
+    }, [pattern])
 
     return (
         <div>
             <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
             </div>
-            {showCode && <ExplanationComponent data={data}/>}
+            {showCode && <ExplanationComponent code={data.code} />}
         </div>
     )
 }
