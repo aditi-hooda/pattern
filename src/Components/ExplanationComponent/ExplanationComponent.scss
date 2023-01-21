@@ -1,0 +1,36 @@
+.explanation-container {
+    .header {
+        background-color: #343541;
+        display: flex;
+        flex-direction: row-reverse;
+        border-radius: 6px 6PX 0 0;
+        margin-top: 10px;
+    }
+
+    .btn-copy {
+        background: transparent;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        cursor: pointer;
+        display: flex;
+
+        img {
+            padding-right: 5px;
+        }
+    }
+
+    .code {
+        padding: 0 1rem;
+        background-color: #000000;
+        color: white;
+        margin: 0;
+    }
+
+    .explanation {
+        background-color: #444654bd;
+        color: white;
+        padding: 2%;
+        border-radius: 0 0 6px 6px;
+    }
+}
