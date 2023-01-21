@@ -11,6 +11,13 @@ import PatternJ from "./PatternJ/PatternJ";
 import PatternK from "./PatternK/PatternK";
 import PatternL from "./PatternL/PatternL";
 import PatternM from "./PatternM/PatternM";
+import PatternN from "./PatternN/PatternN";
+import PatternO from "./PatternO/PatternO";
+import PatternP from "./PatternP/PatternP";
+import PatternQ from "./PatternQ/PatternQ";
+import PatternR from "./PatternR/PatternR";
+import PatternS from "./PatternS/PatternS";
+import PatternT from "./PatternT/PatternT";
 
 export {
     PatternA,
@@ -26,4 +33,11 @@ export {
     PatternK,
     PatternL,
     PatternM,
+    PatternN,
+    PatternO,
+    PatternP,
+    PatternQ,
+    PatternR,
+    PatternS,
+    PatternT,
 }

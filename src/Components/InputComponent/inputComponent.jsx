@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PatternA, PatternB, PatternC, PatternD, PatternE, PatternF, PatternG, PatternH, PatternI, PatternJ, PatternK, PatternL, PatternM } from '../DisplayComponents';
+import { PatternA, PatternB, PatternC, PatternD, PatternE, PatternF, PatternG, PatternH, PatternI, PatternJ, PatternK, PatternL, PatternM, PatternN, PatternO, PatternP, PatternQ, PatternR, PatternS, PatternT } from '../DisplayComponents';
 
 export default function InputComponent() {
     const [inputValue, setInputValue] = useState('');
@@ -9,6 +9,7 @@ export default function InputComponent() {
         setInputValue(event.target.value);
     }
     function handleClick(event) {
+        event.preventDefault();
         //create pattern for each letter in input field
         var characters = inputValue.split("");
         var retComponents = []
@@ -54,18 +55,25 @@ export default function InputComponent() {
                     retComponents.push(<PatternM />);
                     break;
                 case 'N':
+                    retComponents.push(<PatternN />);
                     break;
                 case 'O':
+                    retComponents.push(<PatternO />);
                     break;
                 case 'P':
+                    retComponents.push(<PatternP />);
                     break;
                 case 'Q':
+                    retComponents.push(<PatternQ />);
                     break;
                 case 'R':
+                    retComponents.push(<PatternR />);
                     break;
                 case 'S':
+                    retComponents.push(<PatternS />);
                     break;
                 case 'T':
+                    retComponents.push(<PatternT />);
                     break;
                 case 'U':
                     break;
@@ -88,14 +96,14 @@ export default function InputComponent() {
 
     return (
         <div className='container'>
-            <div className="form">
+            <form onSubmit={handleClick} action='' className="form">
                 <input
                     type="text"
                     value={inputValue}
                     onChange={handleChange}
                 />
-                <button onClick={handleClick}>Create Pattern</button>
-            </div>
+                <button type='submit'>Create Pattern</button>
+            </form>
 
             <div className='container-center'>
                 {ComponentsList && ComponentsList.map((val, index) => {

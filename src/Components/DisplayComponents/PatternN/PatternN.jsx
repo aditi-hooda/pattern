@@ -14,11 +14,11 @@ export default function PatternN() {
         var retPattern = '';
         for (var i = 0; i <= 6; i++) {
             retPattern += "<div>";
-            for (var j = 0; j <= 9; j++) {
-                if ((j === i + 1 || j + i === 8) && i < 4) {
+            for (var j = 0; j < 9; j++) {
+                if (j===i+1) {
                     retPattern += "<span class='star'>*</span>";
                 }
-                else if (j === 0 || j === 9) {
+                else if (j === 0 || j===8) {
                     retPattern += "<span class='star'>*</span>";
                 }
                 else {
@@ -28,7 +28,7 @@ export default function PatternN() {
             retPattern += "</div>";
         }
         setPattern(retPattern);
-    }, [pattern])
+    },[pattern])
 
     return (
         <div>
