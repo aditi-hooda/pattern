@@ -1,16 +1,42 @@
 import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import ExplanationComponent from '../../ExplanationComponent/ExplanationComponent';
+import { data } from './data';
 
 export default function PatternB() {
 
+    let [pattern, setPattern] = useState('');
+    let [showCode, setshowCode] = useState(false);
+    function handleClick() {
+        setshowCode(!showCode);
+    }
+    useEffect(() => {
+        var retPattern = '';
+        for (var i = 0; i < 7; i++) {
+            retPattern += "<div>";
+            for (var j = 0; j < 5; j++) {
+                if (i === 0 || i === 3 || i==6) {
+                    retPattern += "<span>*</span>";
+                }
+                else if (j == 0 || j == 4) {
+                    retPattern += "<span>*</span>";
+                }
+                else {
+                    retPattern += "<span class='space'> </span>";
+                }
+            }
+            retPattern += "</div>";
+        }
+        setPattern(retPattern);
+    })
+
     return (
-
         <div>
-            <div>****</div>
-            <div>***</div>
-            <div>**</div>
-            <div>*</div>
+            <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
+            </div>
+            {showCode && <ExplanationComponent code={data.code} />}
         </div>
-
     )
 
 }
