@@ -2,90 +2,90 @@ import React, { useState } from 'react';
 
 export default function InputComponent() {
     const [inputValue, setInputValue] = useState('');
-
+    const x = "*" + <br /> + "**\n\r***\n\r****";
     function handleChange(event) {
         setInputValue(event.target.value);
     }
-    function handleClick(event){
+    function handleClick(event) {
         //create pattern for each letter in input field
         var characters = inputValue.split("");
-        for(var ch in characters){
-            switch(ch){
+        for (var ch in characters) {
+            switch (ch) {
                 case 'A':
                     //call function to print A
-                break;
+                    break;
                 case 'B':
                     //call function to print A
-                break;
+                    break;
                 case 'C':
                     //call function to print A
-                break;
+                    break;
                 case 'D':
                     //call function to print A
-                break;
+                    break;
                 case 'E':
                     //call function to print A
-                break;
+                    break;
                 case 'F':
                     //call function to print A
-                break;
+                    break;
                 case 'G':
                     //call function to print A
-                break;
+                    break;
                 case 'H':
                     //call function to print A
-                break;
+                    break;
                 case 'I':
                     //call function to print A
-                break;
+                    break;
                 case 'J':
                     //call function to print A
-                break;
+                    break;
                 case 'K':
                     //call function to print A
-                break;
+                    break;
                 case 'L':
                     //call function to print A
-                break;
+                    break;
                 case 'N':
                     //call function to print A
-                break;
+                    break;
                 case 'O':
                     //call function to print A
-                break;
+                    break;
                 case 'P':
                     //call function to print A
-                break;
+                    break;
                 case 'Q':
                     //call function to print A
-                break;
+                    break;
                 case 'R':
                     //call function to print A
-                break;
+                    break;
                 case 'S':
                     //call function to print A
-                break;
+                    break;
                 case 'T':
                     //call function to print A
-                break;
+                    break;
                 case 'U':
                     //call function to print A
-                break;
+                    break;
                 case 'V':
                     //call function to print A
-                break;
+                    break;
                 case 'W':
                     //call function to print A
-                break;
+                    break;
                 case 'X':
                     //call function to print A
-                break;
+                    break;
                 case 'Y':
                     //call function to print A
-                break;
+                    break;
                 case 'Z':
                     //call function to print A
-                break;
+                    break;
                 default:
                     alert("Invalid Character");
             }
@@ -93,13 +93,19 @@ export default function InputComponent() {
     }
 
     return (
-        <>
-        <input
-            type="text"
-            value={inputValue}
-            onChange={handleChange}
-        />
-        <button onClick={handleClick}>Create Pattern</button>
-        </>
+        <div className='container'>
+            <div className="form">
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={handleChange}
+                />
+                <button onClick={handleClick}>Create Pattern</button>
+            </div>
+
+            <div className='container-center'>
+                
+            </div>
+        </div>
     );
 }
