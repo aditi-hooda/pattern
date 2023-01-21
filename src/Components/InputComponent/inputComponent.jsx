@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import PatternA from '../DisplayComponents/PatternA/PatternA';
+import PatternB from '../DisplayComponents/PatternB/PatternB';
 
 export default function InputComponent() {
     const [inputValue, setInputValue] = useState('');
+    var [ComponentsList, setComponentsList] = useState([]);
+
     const x = "*" + <br /> + "**\n\r***\n\r****";
     function handleChange(event) {
         setInputValue(event.target.value);
@@ -9,13 +13,16 @@ export default function InputComponent() {
     function handleClick(event) {
         //create pattern for each letter in input field
         var characters = inputValue.split("");
-        for (var ch in characters) {
+        var retComponents = []
+        for (var ch of characters) {
             switch (ch) {
                 case 'A':
                     //call function to print A
+                    retComponents.push(<PatternA />);
                     break;
                 case 'B':
                     //call function to print A
+                    retComponents.push(<PatternB />);
                     break;
                 case 'C':
                     //call function to print A
@@ -90,6 +97,7 @@ export default function InputComponent() {
                     alert("Invalid Character");
             }
         }
+        setComponentsList(retComponents);
     }
 
     return (
@@ -104,7 +112,12 @@ export default function InputComponent() {
             </div>
 
             <div className='container-center'>
-                
+                {ComponentsList && ComponentsList.length > 1 && ComponentsList.map((val, index) => {
+                    return (
+                    <div key={index}>
+                        {val}
+                    </div>);
+                })}
             </div>
         </div>
     );
