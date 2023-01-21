@@ -5,8 +5,7 @@ export default function ExplanationComponent(props) {
 
     const copyToClipboard = async (e) => {
         try {
-            await navigator.clipboard.writeText(props.code);
-            console.log('Text copied to clipboard');
+            await navigator.clipboard.writeText(props.data.code);
         } catch (err) {
             console.error('Failed to copy text: ', err);
         }

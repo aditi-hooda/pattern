@@ -11,7 +11,7 @@ export default function InputComponent() {
     function handleClick(event) {
         event.preventDefault();
         //create pattern for each letter in input field
-        var characters = inputValue.split("");
+        var characters = inputValue.toUpperCase().split("");
         var retComponents = []
         for (var ch of characters) {
             switch (ch) {
@@ -93,6 +93,9 @@ export default function InputComponent() {
                 case 'Z':
                     retComponents.push(<PatternZ />);
                     break;
+                case ' ':
+                    retComponents.push('break');
+                    break;
                 default:
                     alert("Invalid Character");
             }
@@ -113,6 +116,9 @@ export default function InputComponent() {
 
             <div className='container-center'>
                 {ComponentsList && ComponentsList.map((val, index) => {
+                    if (val === 'break') {
+                        return (<div className='break' key={index}></div>)
+                    }
                     return (
                         <div key={index} className='alphabet'>
                             {val}

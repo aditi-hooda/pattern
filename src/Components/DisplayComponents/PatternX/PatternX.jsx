@@ -14,8 +14,8 @@ export default function PatternM() {
         var retPattern = '';
         for (var i = 0; i <= 6; i++) {
             retPattern += "<div>";
-            for (var j = 0; j < 5; j++) {
-                if (i===j || 4-j===i) {
+            for (var j = 0; j <=6; j++) {
+                if (i===j || j+i===6) {
                     retPattern += "<span class='star'>*</span>";
                 }
                 else {
@@ -31,7 +31,7 @@ export default function PatternM() {
         <div>
             <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
             </div>
-            {showCode && <ExplanationComponent code={data.code} />}
+            {showCode && <ExplanationComponent data={data} />}
         </div>
     )
 }

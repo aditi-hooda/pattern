@@ -14,18 +14,11 @@ export default function PatternM() {
         var retPattern = '';
         for (var i = 0; i <= 6; i++) {
             retPattern += "<div>";
-            for (var j = 0; j < 5; j++) {
-                if (i===3 || i===4 || i===5 || i===6) 
-                {
-                    if(j===2)
-                    {
-                        retPattern += "<span class='star'>*</span>";
-                    }
-                    else {
-                        retPattern += "<span class='space'> </span>";
-                    }
+            for (var j = 0; j <= 6; j++) {
+                if ((i === j || i + j === 6) && i < 4) {
+                    retPattern += "<span class='star'>*</span>";
                 }
-                else if (i===j || 4-j===i) {
+                else if (j === 3 && i > 3) {
                     retPattern += "<span class='star'>*</span>";
                 }
                 else {
@@ -35,13 +28,13 @@ export default function PatternM() {
             retPattern += "</div>";
         }
         setPattern(retPattern);
-    },[pattern])
+    }, [pattern])
 
     return (
         <div>
             <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
             </div>
-            {showCode && <ExplanationComponent code={data.code} />}
+            {showCode && <ExplanationComponent data={data} />}
         </div>
     )
 }
