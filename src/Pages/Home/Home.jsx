@@ -1,11 +1,11 @@
 import React from 'react';
-import InputComponent from '../../Components/InputComponent/inputComponent';
+import HomeComponent from '../../Components/HomeComponent/HomeComponent';
 
 export default function Home() {
 
     return (
         <>
-            <InputComponent />
+            <HomeComponent />
         </>
     )
 

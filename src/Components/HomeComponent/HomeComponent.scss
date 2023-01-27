@@ -1,0 +1,33 @@
+.patterns {
+    width: 300px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(7.6448px + 0.5968vw);
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    &-link {
+        text-decoration: none;
+        color: inherit;
+        margin-right: 10%;
+    }
+
+    &-triangular {
+        background-color: #6B9CB4;
+        color: white;
+        margin-right: 10%;
+        border: 3px solid #2787b7;
+    }
+
+    &-alphabetical {
+        background-color: #07600796;
+        color: white;
+        border: 3px solid darkgreen;
+    }
+}
+
+.row {
+    display: flex;
+}
