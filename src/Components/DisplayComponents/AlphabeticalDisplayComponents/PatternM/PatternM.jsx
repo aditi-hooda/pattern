@@ -1,40 +1,43 @@
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import ExplanationComponent from '../../../ExplanationComponent/ExplanationComponent';
-import { data } from './data';
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import ExplanationComponent from "../../../ExplanationComponent/ExplanationComponent";
+import { data } from "./data";
 
 export default function PatternN() {
-    let [pattern, setPattern] = useState('');
-    let [showCode, setshowCode] = useState(false);
-    function handleClick() {
-        setshowCode(!showCode);
-    }
-    useEffect(() => {
-        var retPattern = '';
-        for (var i = 0; i <= 6; i++) {
-            retPattern += "<div>";
-            for (var j = 0; j <= 9; j++) {
-                if ((j === i + 1 || j + i === 8) && i < 4) {
-                    retPattern += "<span class='star'>*</span>";
-                }
-                else if (j === 0 || j === 9) {
-                    retPattern += "<span class='star'>*</span>";
-                }
-                else {
-                    retPattern += "<span class='space'> </span>";
-                }
-            }
-            retPattern += "</div>";
+  let [pattern, setPattern] = useState("");
+  let [showCode, setshowCode] = useState(false);
+  function handleClick() {
+    setshowCode(!showCode);
+  }
+  useEffect(() => {
+    var retPattern = "";
+    for (var i = 0; i <= 6; i++) {
+      retPattern += "<div>";
+      for (var j = 0; j <= 9; j++) {
+        if (j === i + 1 && i < 4) {
+          retPattern += "<span class='star star-green'>*</span>";
+        } else if (j + i === 8 && i < 4) {
+          retPattern += "<span class='star star-orange'>*</span>";
         }
-        setPattern(retPattern);
-    }, [pattern])
+        else if (j === 0 || j === 9) {
+          retPattern += "<span class='star star-blue'>*</span>";
+        } else {
+          retPattern += "<span class='space'>_</span>";
+        }
+      }
+      retPattern += "</div>";
+    }
+    setPattern(retPattern);
+  }, [pattern]);
 
-    return (
-        <div>
-            <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
-            </div>
-            {showCode && <ExplanationComponent data={data} />}
-        </div>
-    )
+  return (
+    <div>
+      <div
+        onClick={handleClick}
+        dangerouslySetInnerHTML={{ __html: pattern }}
+      ></div>
+      {showCode && <ExplanationComponent data={data} />}
+    </div>
+  );
 }

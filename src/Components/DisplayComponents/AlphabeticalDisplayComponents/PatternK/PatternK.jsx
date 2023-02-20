@@ -16,13 +16,16 @@ export default function PatternK() {
             retPattern += "<div>";
             for (var j = 0; j < 5; j++) {
                 if (j === 0) {
-                    retPattern += "<span class='star'>*</span>";
+                    retPattern += "<span class='star star-red'>*</span>";
                 }
-                else if ((i + j === 4) || (i - j === 2)) {
-                    retPattern += "<span class='star'>*</span>";
+                else if (i + j === 4) {
+                    retPattern += "<span class='star star-green'>*</span>";
+                }
+                else if(i - j === 2){
+                    retPattern += "<span class='star star-orange'>*</span>";
                 }
                 else {
-                    retPattern += "<span class='space'> </span>";
+                    retPattern += "<span class='space'>_</span>";
                 }
             }
             retPattern += "</div>";

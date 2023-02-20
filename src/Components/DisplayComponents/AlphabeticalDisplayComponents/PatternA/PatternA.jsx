@@ -25,15 +25,6 @@ export default function PatternA() {
                 else {
                     retPattern += "<span class='space'>_</span>";
                 }
-                // if (i === 0 || i === 3 || j === 0 || j === 4) {
-                //     retPattern += "<span class='star'>*</span>";
-                // }
-                // // else if (j === 0 || j === 4) {
-                // //     retPattern += "<span class='star'>*</span>";
-                // // }
-                // else {
-                //     retPattern += "<span class='space'>_</span>";
-                // }
             }
             retPattern += "</div>";
         }

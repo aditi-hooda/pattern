@@ -16,13 +16,13 @@ export default function PatternH() {
             retPattern += "<div>";
             for (var j = 0; j < 5; j++) {
                 if (i===3) {
-                    retPattern += "<span class='star'>*</span>";
+                    retPattern += "<span class='star star-red'>*</span>";
                 }
                 else if (j === 0 || j===4) {
-                    retPattern += "<span class='star'>*</span>";
+                    retPattern += "<span class='star star-blue'>*</span>";
                 }
                 else {
-                    retPattern += "<span class='space'> </span>";
+                    retPattern += "<span class='space'>_</span>";
                 }
             }
             retPattern += "</div>";

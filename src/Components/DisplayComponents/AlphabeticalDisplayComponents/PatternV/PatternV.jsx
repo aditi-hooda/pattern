@@ -15,11 +15,14 @@ export default function PatternV() {
         for (var i = 0; i <= 6; i++) {
             retPattern += "<div>";
             for (var j = 0; j < 13; j++) {
-                if (j===i || i+j===12) {
-                    retPattern += "<span class='star'>*</span>";
+                if (j===i) {
+                    retPattern += "<span class='star star-green'>*</span>";
+                }
+                else if(i+j===12){
+                    retPattern += "<span class='star star-orange'>*</span>";
                 }
                 else {
-                    retPattern += "<span class='space'> </span>";
+                    retPattern += "<span class='space'>_</span>";
                 }
             }
             retPattern += "</div>";
