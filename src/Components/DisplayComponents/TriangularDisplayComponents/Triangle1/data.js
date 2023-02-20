@@ -21,7 +21,7 @@ public class PrintA {
     `,
     explanation: `
 This code will print an 'A' made of asterisks (*) using nested loops. 
-The outer loop (i) controls the rows, and the inner loop (j) controls the columns. 
+The <span class="highlighter">outer</span> loop (i) controls the <span class="highlighter">rows</span>, and the <span class="highlighter">inner</span> loop (j) controls the <span class="highlighter">columns</span>. 
 As shown in the image.
 For The ones colored in red will be printed when row index is 0 or 3, 
 So we will add it inside an if condition using OR(||) operator like below

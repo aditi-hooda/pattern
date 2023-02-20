@@ -33,7 +33,7 @@ export default function PatternI() {
 
     return (
         <div>
-            <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
+            <div title="Click me to see the code and explaination" className='pointer' onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
             </div>
             {showCode && <ExplanationComponent data={data} />}
         </div>

@@ -1,45 +1,60 @@
 .explanation-container {
-    box-shadow: 10px 0px 19px 0px #022c46;
+  box-shadow: 10px 0px 19px 0px #022c46;
 
-    .header {
-        // background-color: #343541;
-        background-color: #1e4d6b;
-        border: 3px solid #093958;
-        display: flex;
-        flex-direction: row-reverse;
-        border-radius: 6px 0 0 0;
-        margin-top: 10px;
+  .header {
+    // background-color: #343541;
+    background-color: #1e4d6b;
+    border: 3px solid #093958;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 6px 0 0 0;
+    margin-top: 10px;
+  }
+
+  .btn-copy {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    display: flex;
+
+    img {
+      padding-right: 5px;
     }
+  }
 
-    .btn-copy {
-        background: transparent;
-        color: white;
-        border: none;
-        padding: 8px 20px;
-        cursor: pointer;
-        display: flex;
+  .code {
+    padding: 0 1rem;
+    // background-color: #000000;
+    background-color: #022c46;
+    color: white;
+    margin: 0;
+  }
 
-        img {
-            padding-right: 5px;
-        }
+  .explaination {
+    &-container {
+      // background-color: #444654bd;
+      background-color: #3978a0;
+      border: 3px solid #135a87;
+      color: white;
+      padding: 2%;
+      border-radius: 0 0 0 6px;
+      display: flex;
+      flex-wrap: wrap;
     }
-
-    .code {
-        padding: 0 1rem;
-        // background-color: #000000;
-        background-color: #022c46;
-        color: white;
-        margin: 0;
+    & {
+      width: 75%;
+      margin-left: 20px;
+      p {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
     }
+  }
+}
 
-    .explanation {
-        // background-color: #444654bd;
-        background-color: #3978a0;
-        border: 3px solid #135a87;
-        color: white;
-        padding: 2%;
-        border-radius: 0 0 0 6px;
-        display: flex;
-        flex-wrap: wrap;
-    }
+.highlighter{
+    background-color: yellow;
+    color: black;
 }

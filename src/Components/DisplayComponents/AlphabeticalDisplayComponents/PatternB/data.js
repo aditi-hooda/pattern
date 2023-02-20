@@ -1,12 +1,16 @@
 export const data = {
-    code: `
+  code: `
 public class PrintA {
     public static void main(String[] args) {
         for (int i = 0; i i <= 6; i++) {
             for (int j = 0; j < 5; j++) {
-                if (i === 0 || i === 3 || j === 0 || j === 4) {
+                if (i === 0 || i === 3 || i === 6) {
                     System.out.print("*");
-                } else {
+                } 
+                else if(j === 0 || j === 4){
+                    System.out.print("*");
+                }
+                else {
                     System.out.print(" ");
                 }
             }
@@ -15,8 +19,18 @@ public class PrintA {
     }
 }    
     `,
-    explanation: `This code will print an 'A' made of asterisks (*) using nested loops. 
-    The outer loop (i) controls the rows, and the inner loop (j) controls the columns. 
-    The if statement inside the loops checks the current row (i) and column (j) 
-    and prints an asterisk if it is the first row or middle row or the first column or last column, otherwise it will print a space.`
-}
+  explanation: `
+  The numbers in first column are Row Numbers and the numbers of last row are column numbers.
+  Try to work with these numbers and build some <span class="highlighter">logic using row and column numbers</span>.
+    This code will print an 'B' made of asterisks (*) using nested loops. 
+    The <span class="highlighter">outer</span> loop (i) controls the <span class="highlighter">rows</span>, and the <span class="highlighter">inner</span> loop (j) controls the <span class="highlighter">columns</span>. 
+    As shown in the image.
+    For The ones colored in <span class="highlighter">red</span> will be printed when <span class="highlighter">row index is 0, 3 or 6</span>, 
+    So we will add it inside an if condition using OR(||) operator like below
+    if(i === 0 || i === 3 || i === 6)
+    For the ones colored in <span class="highlighter">blue</span> will be printed when the <span class="highlighter">column index in 0 or 4</span>,
+    So we will add it inside an else if condition (because we dont want it to print when the row condition is printing) using OR(||) operator like below
+    else if(j === 0 || j === 4)
+    For the white blocks we will print a space in the else condition.
+    `,
+};

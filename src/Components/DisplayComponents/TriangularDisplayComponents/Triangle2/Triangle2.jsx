@@ -43,7 +43,7 @@ export default function Triangle2() {
 
     return (
         <div>
-            <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
+            <div title="Click me to see the code and explaination" className='pointer' onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
             </div>
             {showCode && <ExplanationComponent data={data} image={images.a} />}
         </div>

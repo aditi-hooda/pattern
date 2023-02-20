@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { images } from '../../../../Assets';
 import ExplanationComponent from '../../../ExplanationComponent/ExplanationComponent';
 import { data } from './data';
 
@@ -33,9 +34,9 @@ export default function PatternB() {
 
     return (
         <div>
-            <div onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
+            <div title="Click me to see the code and explaination" className='pointer' onClick={handleClick} dangerouslySetInnerHTML={{ __html: pattern }}>
             </div>
-            {showCode && <ExplanationComponent data={data} />}
+            {showCode && <ExplanationComponent data={data} image={images.b}/>}
         </div>
     )
 
